@@ -1,0 +1,36 @@
+int LEDS[] = {12, 11, 10, 9, 7, 8};
+
+void setup() {
+  for (int i = 0; i < 6; i++) 
+  {
+    pinMode(LEDS[i], OUTPUT);
+  }
+}
+
+void loopForward() 
+{
+  
+  for (int i = 0; i < 6; i++) 
+  {
+    digitalWrite(LEDS[i], HIGH);
+    delay(800);
+    digitalWrite(LEDS[i], LOW);
+  }
+}
+  void loopBackward()
+  {
+  for (int i = 5; i >= 0; i--)
+  {
+    digitalWrite(LEDS[i], HIGH);
+    delay(333);
+    digitalWrite(LEDS[i], LOW);
+  }
+}
+
+
+void loop()
+{
+  loopForward();
+  delay(1000);
+  loopBackward();
+}
