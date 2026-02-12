@@ -1,24 +1,24 @@
-int leds[] = {12, 11, 10, 9, 8, 7};
+int LEDS[] = {12, 11, 10, 9, 8, 7};
 
 void setup() {
   for (int i = 0; i < 6; i++) 
   {
-    pinMode(leds[i], OUTPUT);
+    pinMode(LEDS[i], OUTPUT);
   }
 }
 void loop() 
 {
   for (int i = 0; i < 6; i++) 
   {
-    digitalWrite(leds[i], HIGH);
+    digitalWrite(LEDS[i], HIGH);
     delay(800);
-    digitalWrite(leds[i], LOW);
+    digitalWrite(LEDS[i], LOW);
   }
   delay(1000);
   for (int i = 5; i >= 0; i--)
   {
-    digitalWrite(leds[i], HIGH);
+    digitalWrite(LEDS[i], HIGH);
     delay(333);
-    digitalWrite(leds[i], LOW);
+    digitalWrite(LEDS[i], LOW);
   }
 }
